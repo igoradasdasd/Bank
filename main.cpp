@@ -8,13 +8,20 @@
 #include <fstream>
 
 #include "./include/client.h"
+#include "./include/clientBase.h"
 #include "./include/list_of_files.h"
+#include "./include/manager.h"
 
 int main(void)
 {
-	std::ofstream clientStreamFile("." + clientFile, std::ios::in	);
-//	std::cout << clientFile << std::endl;
-	Client client("sdfsd", "sdfasdf", 100);
-	client.editAccount();
+	ClientBase cB("." + clientFile, "." + clientFile);
+	cB.readFromFile();
+
+	Manager M("m", "n", "m1", "n1");
+	M.work(cB);
+
+	cB.writeInFile();
+	cB.printMap();
+
 }
 

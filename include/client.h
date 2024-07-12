@@ -19,6 +19,7 @@ class Client: public Person
 public:
 	Client(const std::string& f_n, const std::string& l_n, double summ = 0): Person(f_n, l_n),
 	account(summ)	{};
+	~Client(){};
 	void editAccount(){ account.ChangeMoney();}
 
 private:
