@@ -23,10 +23,7 @@ int main(void)
 	cB.readFromFile();
 
 	pB.work(cB);
-	/*
-	HighManager M("m", "n", "m1", "n1");
-	M.work(cB);
-*/
+
 	cB.writeInFile();
 	cB.printMap();
 }
