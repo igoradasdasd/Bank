@@ -11,6 +11,8 @@
 #include <iostream>
 
 	std::string clientFile("/files/client.txt");
+	std::string managerFile("/files/managers.txt");
+	std::string highMagerFile("/files/highManagers.txt");
 
 
 

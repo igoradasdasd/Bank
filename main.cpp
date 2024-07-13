@@ -11,17 +11,23 @@
 #include "./include/clientBase.h"
 #include "./include/list_of_files.h"
 #include "./include/manager.h"
+#include "./include/highManager.h"
+#include "./include/personalBase.h"
 
 int main(void)
 {
+	PersonalBase pB("." + managerFile, "." + highMagerFile);
+	pB.readFromFile();
+	pB.print();
 	ClientBase cB("." + clientFile, "." + clientFile);
 	cB.readFromFile();
 
-	Manager M("m", "n", "m1", "n1");
+	pB.work(cB);
+	/*
+	HighManager M("m", "n", "m1", "n1");
 	M.work(cB);
-
+*/
 	cB.writeInFile();
 	cB.printMap();
-
 }
 

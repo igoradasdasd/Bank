@@ -12,6 +12,7 @@ class Account
 {
 public:
 	Account(double in): money(in){}
+	~Account() = default;
 	void ChangeMoney();
 	double GetMoney(){return money;};
 private:
